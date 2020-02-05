@@ -1,0 +1,37 @@
+<div class="search-box">
+    <div class="form formH">
+        <input type="text" class="text title" name="title" id="title">
+        <select name="phase" class="title sel">
+            <option value="-1">Phase</option>
+            <option value="BEFORE">Before</option>
+            <option value="FINISHED">Finished</option>
+        </select>
+        <button class="search">SEARCH</button>
+    </div>
+    <div class="show">
+        <button class="open-search"><i class="fa fa-search fa-10x"></i></button>
+    </div>
+</div>
+<div class="heading">
+    <h2>Contest List</h2>
+</div>
+<div class="data">
+    <table class="contests">
+        <tr class="head">
+            <th>Name</th>
+            <th>Type</th>
+            <th>Phase</th>
+            <th>Duration</th>
+            <th>Difficulty</th>
+        </tr>
+        {{#each data}}
+            <tr class="list">
+                <td><a href="{{this.websiteUrl}}">{{this.name}}</a></td>
+                <td>{{this.type}}</td>
+                <td>{{this.phase}}</td>
+                <td>{{this.durationSeconds}}</td>
+                <td>{{this.startTimeSeconds}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>

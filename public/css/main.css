@@ -1,0 +1,138 @@
+table.contests {
+    background-color: #fbb3ae;
+    margin: auto;
+    border-collapse: collapse;
+    margin-bottom: 5%;
+}
+
+tr.head {
+    background-color: #f44336;
+}
+
+tr.head th {
+    font-size: 120%;
+}
+
+tr.list td {
+    font-size: 110%;
+    padding-left: 1%;
+    width: max-content;
+}
+
+tr.list:nth-child(odd) {
+    background-color: #f6665c;
+}
+
+tr.list:nth-child(even) {
+    background-color: #fbb3ae;
+}
+
+body {
+    background-color: #fdd9d6;
+    min-height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f98d85;
+    color: #8d1007;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 120%;
+    text-align: center;
+    font-family: algerian;
+    font-stretch: expanded;
+}
+
+.heading h2 {
+    color: #c5170a;
+    text-align: center;
+    font-size: 180%;
+}
+
+footer {
+    background-color: #f6665c;
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+}
+
+.show {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    width: 100%;
+}
+
+.open-search {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #cfcfcf;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 2px #bdbdbd;
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+}
+
+.open-search:hover {
+    box-shadow: 0px 0px 4px 4px #8a8a8a;
+    cursor: pointer;
+}
+
+.title {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 2px;
+    border: none;
+}
+
+.formS {
+    display: block;
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    padding-left: 40%;
+    animation-name: search;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.formH {
+    visibility: collapse;
+}
+
+@keyframes search {
+    0% {
+        top: -10vh
+    }
+    100% {
+        top: 1vh;
+    }
+}
+
+.search {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 2px;
+    border: none;
+    background-color: #f6665c;
+}
+
+.search:hover {
+    cursor: pointer;
+}
