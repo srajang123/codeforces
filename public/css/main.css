@@ -39,13 +39,17 @@ body {
 
 header {
     background-color: #f98d85;
-    color: #8d1007;
     padding-top: 1%;
     padding-bottom: 1%;
     font-size: 120%;
     text-align: center;
+}
+
+.header a {
     font-family: algerian;
+    text-decoration: none;
     font-stretch: expanded;
+    color: #8d1007;
 }
 
 .heading h2 {

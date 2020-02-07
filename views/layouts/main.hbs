@@ -7,11 +7,17 @@
     <title>{{{title}}}</title>
     <link rel="stylesheet" href="/css/main.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{#if home}}
+    <link rel="stylesheet" href="/css/home.css" type="text/css">
+    {{/if}}
+    {{#if nofound}}
+    <link rel="stylesheet" href="/css/404.css" type="text/css">
+    {{/if}}
 </head>
 <body>
     <header>
         <div class="header">
-            <h1>Codeforces</h1>
+            <a href="/"><h1>Codeforces API</h1></a>
         </div>
     </header>
     <div class="body">
@@ -19,6 +25,7 @@
     </div>
     <footer>
         <h3>Website made by Srajan</h3>
+        <h4>&copy; Srajan Gupta 2020</h4>
     </footer>
 </body>
 {{#if contests}}
