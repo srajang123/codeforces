@@ -1,0 +1,13 @@
+.no-found {
+    padding-left: 5%;
+}
+
+.no-found h1 {
+    color: #cb0000;
+    font-size: 300%;
+}
+
+.no-found h2 {
+    color: #af0000;
+    font-size: 200%;
+}

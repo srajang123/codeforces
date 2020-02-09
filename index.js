@@ -17,22 +17,31 @@ function contests() {
 }
 
 app.get('/', (req, res, next) => {
-    console.log('Welcome');
-    res.render('home');
-})
+    res.render('index', { title: 'CodeForces API', home: true });
+});
 app.get('/contests/:type', (req, res, next) => {
     let type = req.params.type;
     request('https://codeforces.com/api/contest.list', (err, response, body) => {
         let data = JSON.parse(body).result;
         res.render('home', { data: data, type: type, contests: true, title: 'Contest List' })
     })
-})
+});
 app.get('/contests/', (req, res, next) => {
     //res.render('home', { data: 'a', contests: true, title: 'Contest List' })
     request('https://codeforces.com/api/contest.list', (err, response, body) => {
         let data = JSON.parse(body).result;
         res.render('home', { data: data, contests: true, title: 'Contest List' })
     })
+});
+app.get('/problems/', (req, res, next) => {
+    request('https://codeforces.com/api/problemset.problems', (err, response, body) => {
+        let data = JSON.parse(body).result;
+        console.log(data);
+        res.send(data);
+        //res.render('home', { data: data, contests: true, title: 'Contest List' })
+    })
+});
+app.use((req, res, next) => {
+    res.render('404', { title: 'Page Not Found', nofound: true });
 })
-
 app.listen(2000, () => { console.log('Server stared at 2000') })
