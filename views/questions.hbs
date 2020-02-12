@@ -1,0 +1,53 @@
+<div class="search-box">
+    <div class="form formH">
+        <input type="text" class="text title" name="title" id="title">
+        <select name="phase" class="title sel">
+            <option value="-1">Level</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+            <option value="K">K</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="N">N</option>
+            <option value="O">O</option>
+            <option value="P">P</option>
+            <option value="Q">Q</option>
+            <option value="R">R</option>
+            <option value="U">U</option>
+
+        </select>
+        <button class="search">SEARCH</button>
+    </div>
+    <div class="show">
+        <button class="open-search"><i class="fa fa-search fa-10x"></i></button>
+    </div>
+</div>
+<div class="heading">
+    <h2>Contest List</h2>
+</div>
+<div class="data">
+    <table class="contests">
+        <tr class="head">
+            <th>Level</th>
+            <th>Name</th>
+            <th>Problem Link</th>
+            <th>Tags</th>
+        </tr>
+        {{#each data}}
+            <tr class="list">
+                <td>{{this.index}}</td>
+                <td>{{this.name}}</td>
+                <td><a href="https://codeforces.com/{{this.contestId}}/{{this.index}}">Click Here</a></td>
+                <td>{{this.tags}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>

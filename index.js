@@ -27,7 +27,6 @@ app.get('/contests/:type', (req, res, next) => {
     })
 });
 app.get('/contests/', (req, res, next) => {
-    //res.render('home', { data: 'a', contests: true, title: 'Contest List' })
     request('https://codeforces.com/api/contest.list', (err, response, body) => {
         let data = JSON.parse(body).result;
         res.render('home', { data: data, contests: true, title: 'Contest List' })
@@ -35,10 +34,14 @@ app.get('/contests/', (req, res, next) => {
 });
 app.get('/problems/', (req, res, next) => {
     request('https://codeforces.com/api/problemset.problems', (err, response, body) => {
-        let data = JSON.parse(body).result;
-        console.log(data);
-        res.send(data);
-        //res.render('home', { data: data, contests: true, title: 'Contest List' })
+        let data = JSON.parse(body).result.problems.sort((a, b) => {
+            x = a.index.toLowerCase();
+            y = b.index.toLowerCase();
+            if (x < y) return -1;
+            if (x > y) return 1;
+            return 0;
+        });
+        res.render('questions', { data: data, problems: true, title: 'Question List' })
     })
 });
 app.use((req, res, next) => {
