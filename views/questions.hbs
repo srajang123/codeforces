@@ -1,6 +1,7 @@
 <div class="search-box">
     <div class="form formH">
         <input type="text" class="text title" name="title" id="title">
+        <input type="text" class="text rating" name="rating" id="rating">
         <select name="phase" class="title sel">
             <option value="-1">Level</option>
             <option value="A">A</option>
@@ -37,6 +38,7 @@
     <table class="contests">
         <tr class="head">
             <th>Level</th>
+            <th>Rating</th>
             <th>Name</th>
             <th>Problem Link</th>
             <th>Tags</th>
@@ -44,6 +46,7 @@
         {{#each data}}
             <tr class="list">
                 <td>{{this.index}}</td>
+                <td>{{this.rating}}</td>
                 <td>{{this.name}}</td>
                 <td><a href="https://codeforces.com/{{this.contestId}}/{{this.index}}">Click Here</a></td>
                 <td>{{this.tags}}</td>

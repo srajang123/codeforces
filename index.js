@@ -35,10 +35,15 @@ app.get('/contests/', (req, res, next) => {
 app.get('/problems/', (req, res, next) => {
     request('https://codeforces.com/api/problemset.problems', (err, response, body) => {
         let data = JSON.parse(body).result.problems.sort((a, b) => {
-            x = a.index.toLowerCase();
+            /*x = a.index.toLowerCase();
             y = b.index.toLowerCase();
             if (x < y) return -1;
-            if (x > y) return 1;
+            if (x > y) return 1;*/
+            x=a.rating;
+            y=b.rating;
+            if(!x || !y)return 0;
+            if(x<y)return -1;
+            if(x>y) return 1;
             return 0;
         });
         res.render('questions', { data: data, problems: true, title: 'Question List' })

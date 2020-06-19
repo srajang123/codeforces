@@ -4,6 +4,7 @@ document.querySelector('.open-search').addEventListener('click', (e) => {
 })
 document.querySelector('.search').addEventListener('click', (e) => {
     let title = document.querySelector('.title').value;
+    //let rating=document.querySelector('.')
     let phase = document.querySelector('.sel').value;
     let list = document.querySelectorAll('.list');
     list.forEach(v => {
