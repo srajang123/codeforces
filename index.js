@@ -3,7 +3,7 @@ const request = require('request');
 const expHbs = require('express-handlebars');
 const app = express();
 
-const PORT=process.env.PORT|2000;
+const PORT=process.env.PORT||2000;
 
 app.engine('hbs', expHbs({
     extname: 'hbs',
