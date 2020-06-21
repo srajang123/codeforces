@@ -3,6 +3,8 @@ const request = require('request');
 const expHbs = require('express-handlebars');
 const app = express();
 
+const PORT=process.env.PORT|2000;
+
 app.engine('hbs', expHbs({
     extname: 'hbs',
     defaultLayout: 'main'
@@ -52,4 +54,4 @@ app.get('/problems/', (req, res, next) => {
 app.use((req, res, next) => {
     res.render('404', { title: 'Page Not Found', nofound: true });
 })
-app.listen(2000, () => { console.log('Server stared at 2000') })
+app.listen(PORT, () => { console.log(`Server stared at ${PORT}`) })
