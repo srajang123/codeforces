@@ -5,10 +5,11 @@ body {
     padding: 0;
     margin: 0;
     background-color: $bgcolor;
+    min-height: 100%;
     header {
         background-color: $head-bg;
-        padding-top: 0.01%;
-        padding-bottom: 0.01%;
+        padding-top: 0.01vh;
+        padding-bottom: 0.01vh;
         font-size: 120%;
         text-align: center;
         a {
@@ -19,12 +20,88 @@ body {
             font-size: 4vh;
         }
     }
+    .heading {
+        h2 {
+            color: $head-bg;
+            text-align: center;
+            font-size: 180%;
+        }
+    }
+    .search-box {
+        padding-left: 10%;
+        margin-top: 2%;
+        .form {
+            input {
+                &.text {
+                    height: 5vh;
+                    width: 30vw;
+                    border-radius: 5px;
+                    border: solid 1px #111;
+                }
+            }
+            select {
+                &.sel {
+                    height: 6vh;
+                    width: 5vw;
+                    border-radius: 5px;
+                    border: solid 1px #111;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            button {
+                &.search {
+                    height: 6vh;
+                    width: 5vw;
+                    border-radius: 5px;
+                    border: solid 1px #111;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
     footer {
         display: block;
         width: 100%;
+        /*
         position: absolute;
-        bottom: 0;
+        bottom: 0;*/
+        position: relative;
+        margin-top: 100px;
         text-align: center;
+    }
+    table {
+        &.contests {
+            margin: auto;
+            border-collapse: collapse;
+            margin-bottom: 5%;
+            tbody {
+                tr {
+                    &.head {
+                        background-color: #545454;
+                        th {
+                            font-size: 120%;
+                        }
+                    }
+                    &.list {
+                        td {
+                            font-size: 110%;
+                            padding-left: 1%;
+                            width: max-content;
+                        }
+                    }
+                    &.list:nth-child(odd) {
+                        background-color: #ccc;
+                    }
+                    &.list:nth-child(even) {
+                        background-color: #eee;
+                    }
+                }
+            }
+        }
     }
 }
 

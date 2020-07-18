@@ -2,11 +2,12 @@ body {
   padding: 0;
   margin: 0;
   background-color: #afafaf;
+  min-height: 100%;
 }
 body header {
   background-color: #222;
-  padding-top: 0.01%;
-  padding-bottom: 0.01%;
+  padding-top: 0.01vh;
+  padding-bottom: 0.01vh;
   font-size: 120%;
   text-align: center;
 }
@@ -17,12 +18,70 @@ body header a {
   color: #fff;
   font-size: 4vh;
 }
+body .heading h2 {
+  color: #222;
+  text-align: center;
+  font-size: 180%;
+}
+body .search-box {
+  padding-left: 10%;
+  margin-top: 2%;
+}
+body .search-box .form input.text {
+  height: 5vh;
+  width: 30vw;
+  border-radius: 5px;
+  border: solid 1px #111;
+}
+body .search-box .form select.sel {
+  height: 6vh;
+  width: 5vw;
+  border-radius: 5px;
+  border: solid 1px #111;
+}
+body .search-box .form select.sel:hover {
+  cursor: pointer;
+}
+body .search-box .form button.search {
+  height: 6vh;
+  width: 5vw;
+  border-radius: 5px;
+  border: solid 1px #111;
+}
+body .search-box .form button.search:hover {
+  cursor: pointer;
+}
 body footer {
   display: block;
   width: 100%;
+  /*
   position: absolute;
-  bottom: 0;
+  bottom: 0;*/
+  position: relative;
+  margin-top: 100px;
   text-align: center;
+}
+body table.contests {
+  margin: auto;
+  border-collapse: collapse;
+  margin-bottom: 5%;
+}
+body table.contests tbody tr.head {
+  background-color: #545454;
+}
+body table.contests tbody tr.head th {
+  font-size: 120%;
+}
+body table.contests tbody tr.list td {
+  font-size: 110%;
+  padding-left: 1%;
+  width: max-content;
+}
+body table.contests tbody tr.list:nth-child(odd) {
+  background-color: #ccc;
+}
+body table.contests tbody tr.list:nth-child(even) {
+  background-color: #eee;
 }
 
 @media (max-width: 720px) {

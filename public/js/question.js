@@ -1,7 +1,7 @@
-document.querySelector('.open-search').addEventListener('click', (e) => {
+/*document.querySelector('.open-search').addEventListener('click', (e) => {
     document.querySelector('.form').classList.remove('formH');
     document.querySelector('.form').classList.add('formS');
-})
+})*/
 document.querySelector('.search').addEventListener('click', (e) => {
     let title = document.querySelector('.title').value;
     //let rating=document.querySelector('.')
