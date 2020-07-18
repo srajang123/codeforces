@@ -6,6 +6,7 @@ body {
     margin: 0;
     background-color: $bgcolor;
     min-height: 100%;
+    overflow-x: hidden;
     header {
         background-color: $head-bg;
         padding-top: 0.01vh;
@@ -30,34 +31,39 @@ body {
     .search-box {
         padding-left: 10%;
         margin-top: 2%;
+        display: flex;
+        flex-wrap: wrap;
         .form {
-            input {
-                &.text {
-                    height: 5vh;
-                    width: 30vw;
-                    border-radius: 5px;
-                    border: solid 1px #111;
-                }
-            }
-            select {
-                &.sel {
-                    height: 6vh;
-                    width: 5vw;
-                    border-radius: 5px;
-                    border: solid 1px #111;
-                    &:hover {
-                        cursor: pointer;
+            .lvl {
+                flex: 100%;
+                input {
+                    &.text {
+                        height: 5vh;
+                        width: 30vw;
+                        border-radius: 5px;
+                        border: solid 1px #111;
                     }
                 }
-            }
-            button {
-                &.search {
-                    height: 6vh;
-                    width: 5vw;
-                    border-radius: 5px;
-                    border: solid 1px #111;
-                    &:hover {
-                        cursor: pointer;
+                select {
+                    &.sel {
+                        height: 6vh;
+                        width: 5vw;
+                        border-radius: 5px;
+                        border: solid 1px #111;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                button {
+                    &.search {
+                        height: 6vh;
+                        width: 5vw;
+                        border-radius: 5px;
+                        border: solid 1px #111;
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -106,7 +112,52 @@ body {
     body {
         header {
             a {
-                font-size: 3vh;
+                font-size: 2vh;
+            }
+        }
+        .search-box {
+            .form {
+                .lvl {
+                    flex: 50%;
+                    margin-top: 2%;
+                    select {
+                        &.sel {
+                            width: 31.5vw;
+                        }
+                    }
+                    button {
+                        &.search {
+                            width: 31.5vw;
+                        }
+                    }
+                }
+            }
+        }
+        table {
+            &.contests {
+                tbody {
+                    tr {
+                        &.head {
+                            background-color: #545454;
+                            th {
+                                font-size: 90%;
+                            }
+                        }
+                        &.list {
+                            td {
+                                font-size: 90%;
+                                padding-left: 0%;
+                                width: max-content;
+                            }
+                        }
+                        td,
+                        th {
+                            &:nth-child(5) {
+                                visibility: collapse;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

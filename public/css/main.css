@@ -3,6 +3,7 @@ body {
   margin: 0;
   background-color: #afafaf;
   min-height: 100%;
+  overflow-x: hidden;
 }
 body header {
   background-color: #222;
@@ -26,37 +27,39 @@ body .heading h2 {
 body .search-box {
   padding-left: 10%;
   margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
 }
-body .search-box .form input.text {
+body .search-box .form .lvl {
+  flex: 100%;
+}
+body .search-box .form .lvl input.text {
   height: 5vh;
   width: 30vw;
   border-radius: 5px;
   border: solid 1px #111;
 }
-body .search-box .form select.sel {
+body .search-box .form .lvl select.sel {
   height: 6vh;
   width: 5vw;
   border-radius: 5px;
   border: solid 1px #111;
 }
-body .search-box .form select.sel:hover {
+body .search-box .form .lvl select.sel:hover {
   cursor: pointer;
 }
-body .search-box .form button.search {
+body .search-box .form .lvl button.search {
   height: 6vh;
   width: 5vw;
   border-radius: 5px;
   border: solid 1px #111;
 }
-body .search-box .form button.search:hover {
+body .search-box .form .lvl button.search:hover {
   cursor: pointer;
 }
 body footer {
   display: block;
   width: 100%;
-  /*
-  position: absolute;
-  bottom: 0;*/
   position: relative;
   margin-top: 100px;
   text-align: center;
@@ -86,7 +89,32 @@ body table.contests tbody tr.list:nth-child(even) {
 
 @media (max-width: 720px) {
   body header a {
-    font-size: 3vh;
+    font-size: 2vh;
+  }
+  body .search-box .form .lvl {
+    flex: 50%;
+    margin-top: 2%;
+  }
+  body .search-box .form .lvl select.sel {
+    width: 31.5vw;
+  }
+  body .search-box .form .lvl button.search {
+    width: 31.5vw;
+  }
+  body table.contests tbody tr.head {
+    background-color: #545454;
+  }
+  body table.contests tbody tr.head th {
+    font-size: 90%;
+  }
+  body table.contests tbody tr.list td {
+    font-size: 90%;
+    padding-left: 0%;
+    width: max-content;
+  }
+  body table.contests tbody tr td:nth-child(5),
+body table.contests tbody tr th:nth-child(5) {
+    visibility: collapse;
   }
 }
 
