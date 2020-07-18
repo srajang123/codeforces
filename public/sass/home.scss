@@ -1,0 +1,44 @@
+$bgcolor: #afafaf;
+$head-bg: #222;
+$head-ft: #fff;
+.options {
+    display: flex;
+    padding-left: 8%;
+    margin-top: 4%;
+    .opt {
+        box-sizing: border-box;
+        flex: 50%;
+        background-color: #fff;
+        margin: 10px;
+        text-align: center;
+        max-width: 40%;
+        min-width: 30%;
+        max-height: 40vh;
+        min-height: 30vh;
+        border-radius: 5px;
+        padding-top: 2%;
+        transition-property: box-shadow;
+        transition-duration: 500ms;
+        transition-timing-function: linear;
+        background-color: #eecfcf;
+        margin-right: 5%;
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 4px 4px #121212;
+            background-color: #444;
+            color: #ccc;
+            .opt-body {
+                color: $head-ft;
+            }
+        }
+        &-head {
+            color: dar($head-bg, 40%);
+            font-size: 120%;
+        }
+        &-body {
+            color: lighten($head-bg, 1%);
+            font-weight: 500;
+            font-size: 120%;
+        }
+    }
+}

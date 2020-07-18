@@ -1,0 +1,22 @@
+$bgcolor: #afafaf;
+$head-bg: #222;
+$head-ft: #fff;
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $bgcolor;
+    header {
+        background-color: $head-bg;
+        padding-top: 0.01%;
+        padding-bottom: 0.01%;
+        font-size: 120%;
+        text-align: center;
+        a {
+            font-family: algerian;
+            text-decoration: none;
+            font-stretch: expanded;
+            color: $head-ft;
+            font-size: 4vh;
+        }
+    }
+}
